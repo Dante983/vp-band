@@ -8,8 +8,7 @@
 			<header class="site-header">
 				<div class="container">
 					<a href="/" id="branding">
-						<img src="/images/logo-1.jpg" alt="Site Title">
-						<small class="site-description">Slogan goes here</small>
+						<img src="/images/logo.png" alt="Site Title">
 					</a> <!-- #branding -->
 					
 					<nav class="main-navigation">
@@ -17,10 +16,10 @@
 						<ul class="menu">
 							<li class="menu-item current-menu-item"><a href="/">Home</a></li>
 							<li class="menu-item"><a href="/about">About</a></li>
-							<li class="menu-item"><a href="gallery.html">Gallery</a></li>
+							<li class="menu-item"><a href="/gallery">Gallery</a></li>
 							<!-- <li class="menu-item"><a href="download.html">Download</a></li>
 							<li class="menu-item"><a href="blog.html">Blog</a></li> -->
-							<li class="menu-item"><a href="contact.html">Contact</a></li>
+							<li class="menu-item"><a href="/contact">Contact</a></li>
 						</ul> <!-- .menu -->
 					</nav> <!-- .main-navigation -->
 					<div class="mobile-menu"></div>
@@ -29,7 +28,6 @@
 			
 			<div class="hero">
 				<div class="slider">
-					
 					<ul class="slides">
 						<li class="lazy-bg" data-background="/images/background.jpg">
 							<div class="container">
@@ -40,16 +38,16 @@
 								<a href="#" class="button cut-corner">eventualno da vodi negdje</a>
 							</div>
 						</li>
-						<!-- <li class="lazy-bg" data-background="dummy/slide-2.jpg">
+						<li class="lazy-bg" data-background="/images/background-1.jpg">
 							<div class="container">
-									<h2 class="slide-title">Header goes here</h2>
-									<h3 class="slide-subtitle">Less important text goes here</h3>
-									<p class="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Fugiat aliquid minus nemo sed est.</p>
+									<h2 class="slide-title">Novi momenti</h2>
+									<h3 class="slide-subtitle">omanji naslov </h3>
+									<p class="slide-desc">e sad je ovo vec nek se vrti kao, izgleda bolje.</p>
 
-									<a href="#" class="button cut-corner">Read More</a>
+									<a href="#" class="button cut-corner">dalje dalje</a>
 							</div>
 						</li>
-						<li class="lazy-bg" data-background="dummy/slide-3.jpg">
+						<!-- <li class="lazy-bg" data-background="dummy/slide-3.jpg">
 							<div class="container">
 									<h2 class="slide-title">Header goes here</h2>
 									<h3 class="slide-subtitle">Less important text goes here</h3>
@@ -189,29 +187,7 @@
 				</div> <!-- .why-chooseus-section -->
 			</main> <!-- .main-content -->
 
-			<footer class="site-footer">
-				<div class="container">
-					<img src="../../dummy/logo-footer.png" alt="Site Name">
-					
-					<address>
-						<p>495 Brainard St. Detroit, MI 48201 <br><a href="tel:354543543">(563) 429 234 890</a> <br> <a href="mailto:info@bandname.com">info@bandname.com</a></p> 
-					</address> 
-					
-					<form action="#" class="newsletter-form">
-						<input type="email" placeholder="Enter your email to join newsletter...">
-						<input type="submit" class="button cut-corner" value="Subscribe">
-					</form> <!-- .newsletter-form -->
-					
-					<div class="social-links">
-						<a href="#"><i class="fa fa-facebook-square"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-					</div> <!-- .social-links -->
-					
-					<p class="copy">Copyright 2014 Company Name. Designed by Themezy. All right reserved</p>
-				</div>
-			</footer> <!-- .site-footer -->
+			<%- include('../partials/footer.ejs') %>
 
 		</div> <!-- #site-content -->
 

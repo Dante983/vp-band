@@ -1745,7 +1745,7 @@ body {
     height: 0; }
   /* line 5, sass/layout/_header.scss */
   .header-collapse .site-header {
-    position: absolute;
+    /* position: absolute; */
     width: 100%; }
   /* line 9, sass/layout/_header.scss */
   .site-header .container {
@@ -2232,7 +2232,7 @@ body {
       margin-right: -100%;
       width: 100%;
       float: left;
-      min-height: auto;
+      /* min-height: auto; */
       background-color: #171717;
       background-size: contain;
       background-repeat: no-repeat;

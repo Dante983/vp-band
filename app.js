@@ -19,14 +19,22 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}))
 app.use(morgan('dev'));
 
+
+
+app.get('/about', (req, res) => {
+    res.render('about',{title: 'About' });
+});
+
+app.get('/gallery', (req, res) => {
+    res.render('gallery',{title: 'Gallery' });
+});
+
+app.get('/contact', (req, res) => {
+    res.render('contact',{title: 'Contact' });
+});
+
 app.get('/', (req, res) => {
     res.redirect('page');
 })
-
-app.get('/about', (req, res) => {
-
-    res.render('about',{title: 'About' });
-
-});
 
 app.use('/page', pageRoutes);
