@@ -29,12 +29,26 @@ app.get('/gallery', (req, res) => {
     res.render('gallery',{title: 'Gallery' });
 });
 
+// app.get('/events', (req, res) => {
+//     res.render('events',{title: 'Events' });
+// });
+
 app.get('/contact', (req, res) => {
     res.render('contact',{title: 'Contact' });
 });
 
+app.get('/events', (req, res) => {
+    res.redirect('page');
+});
+
 app.get('/', (req, res) => {
     res.redirect('page');
-})
+});
 
 app.use('/page', pageRoutes);
+
+// 404 page
+
+app.use((req, res) => {
+    res.status(404).render('404', {title: '404' });;
+});

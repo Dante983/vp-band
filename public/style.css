@@ -38,7 +38,7 @@ audio:not([controls]) {
 
 /* line 97, sass/libs/_normalize.scss */
 html {
-  background: #fff;
+  background: #191919;
   color: #000;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
@@ -394,7 +394,7 @@ body {
 /* line 127, sass/libs/_component.scss */
 #imagelightbox-overlay {
   background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   z-index: 9998;
   top: 0;

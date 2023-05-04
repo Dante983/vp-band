@@ -3,7 +3,7 @@ const router = express.Router();
 const pageControllers = require('../controllers/pageControllers');
 
 router.get('/', pageControllers.page_index);
-// router.get('/gallery', pageControllers.page_gallery);
+router.get('/events', pageControllers.page_events);
 
 
 module.exports = router;
