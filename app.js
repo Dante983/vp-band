@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const { result, get } = require('lodash');
 const pageRoutes = require('./routes/pageRoutes');
@@ -6,7 +8,7 @@ const app = express();
 const morgan = require('morgan');
 const { render } = require('ejs');
 
-const dbURI = 'mongodb+srv://savicn209:!Nikolasavic61@cluster0.fkjsunt.mongodb.net/vpband?retryWrites=true&w=majority';
+const dbURI = process.env.MONGODB_URI;
 mongoose.connect(dbURI)
     .then((result) => app.listen(3001))
     .catch((err) => console.log(err));

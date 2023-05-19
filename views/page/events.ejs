@@ -32,102 +32,97 @@
 							<h2 class="entry-title">Events</h2>
 							<div class="filter-links filterable-nav">
 								<select class="mobile-filter">
-									<option value="*">Show all</option>
-									<option value=".2023">2023</option>
+									<option value=".2023" selected>2023</option>
 									<option value=".2024">2024</option>
 									<option value=".2025">2025</option>
 								</select>
-								<a href="#" class="current" data-filter="*">Show all</a>
-								<a href="#" data-filter=".2023">2023</a>
+								<a href="#" class="current" data-filter=".2023">2023</a>
 								<a href="#" data-filter=".2024">2024</a>
 								<a href="#" data-filter=".2025">2025</a>
 							</div>
 							<div class="filterable-items">
-								<% if(events.length > 0){ %>
+								<div class="filterable-item 2023" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
 									<% months.forEach(month => { %>
-										<table class="filterable-item 2023" style="border-color: white;">
-											<tr>
-												<th>
-													<%= month %>
-												</th>
-											</tr>
-											<% events.forEach(event => { %>
-												<% if((event.date.getMonth()) === months.indexOf(month) && event.year == 2023) { %>
-													<tr>
-														<td>
-															<%= event.event %>
-														</td>
+										<% const filteredEvents = events.filter(event => (event.date.getMonth()) === months.indexOf(month) && event.year == 2023); %>
+										<% if(filteredEvents.length > 0) { %>
+											<div style="flex: 1 0 25%;">
+												<table style="border-color: white; background-color: #222; border-collapse: collapse; width: 100%;">
+													<tr style="background-color: #333;">
+														<th colspan="2" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+															<%= month %>
+														</th>
 													</tr>
-													<tr>
-														<td>
-															<%= event.date.toDateString() %>
-														</td>
-													</tr>
-												<% } %>
-											<% }) %>
-										</table>
+													<% filteredEvents.forEach(event => { %>
+														<tr>
+															<td style="padding: 10px; border: 1px solid #555; color: white;">
+																<%= event.event %>
+															</td>
+															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+																<%= event.date.toDateString() %>
+															</td>
+														</tr>
+													<% }) %>
+												</table>
+											</div>
+										<% } %>
 									<% }) %>
-								<% } %>
-								<div class="filterable-item 2024">
-									<% if(events.length > 0){ %>
-										<% events.forEach(event => { %>
-											<% if(event.year == 2024) { %>
-												<p> <%= event.year %></p>
-												<p> <%= event.event %></p>
-												<p> <%= event.date %></p>
-											<% } %>
-										<% }) %>
-									<% } %>
-									<!-- <a href="/images/band/band2.jpg"><figure><img src="/images/band/band2.jpg" alt="gallery 2"></figure></a> -->
 								</div>
-								<div class="filterable-item 2025">
-									<% if(events.length > 0){ %>
-										<% events.forEach(event => { %>
-											<% if(event.year == 2025) { %>
-												<p> <%= event.year %></p>
-												<p> <%= event.event %></p>
-												<p> <%= event.date %></p>
-											<% } %>
-										<% }) %>
-									<% } %>
-									<!-- <a href="/images/band/band3.jpg"><figure><img src="/images/band/band3.jpg" alt="gallery 3"></figure></a> -->
+								<div class="filterable-item 2024" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+									<% months.forEach(month => { %>
+										<% const filteredEvents = events.filter(event => (event.date.getMonth()) === months.indexOf(month) && event.year == 2024); %>
+										<% if(filteredEvents.length > 0) { %>
+											<div style="flex: 1 0 25%;">
+												<table style="border-color: white; background-color: #222; border-collapse: collapse; width: 100%;">
+													<tr style="background-color: #333;">
+														<th colspan="2" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+															<%= month %>
+														</th>
+													</tr>
+													<% filteredEvents.forEach(event => { %>
+														<tr>
+															<td style="padding: 10px; border: 1px solid #555; color: white;">
+																<%= event.event %>
+															</td>
+															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+																<%= event.date.toDateString() %>
+															</td>
+														</tr>
+													<% }) %>
+												</table>
+											</div>
+										<% } %>
+									<% }) %>
 								</div>
-								<!-- <div class="filterable-item concert">
-									<a href="/images/band/band4.jpg"><figure><img src="/images/band/band4.jpg" alt="gallery 3"></figure></a>
+								<div class="filterable-item 2025" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+									<% months.forEach(month => { %>
+										<% const filteredEvents = events.filter(event => (event.date.getMonth()) === months.indexOf(month) && event.year == 2025); %>
+										<% if(filteredEvents.length > 0) { %>
+											<div style="flex: 1 0 25%;">
+												<table style="border-color: white; background-color: #222; border-collapse: collapse; width: 100%;">
+													<tr style="background-color: #333;">
+														<th colspan="2" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+															<%= month %>
+														</th>
+													</tr>
+													<% filteredEvents.forEach(event => { %>
+														<tr>
+															<td style="padding: 10px; border: 1px solid #555; color: white;">
+																<%= event.event %>
+															</td>
+															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+																<%= event.date.toDateString() %>
+															</td>
+														</tr>
+													<% }) %>
+												</table>
+											</div>
+										<% } %>
+									<% }) %>
 								</div>
-								<div class="filterable-item stuff">
-									<a href="dummy/large-gallery/gallery-4.jpg"><figure><img src="dummy/gallery-4.jpg" alt="gallery 4"></figure></a>
-								</div>
-								<div class="filterable-item concert">
-									<a href="/images/band/band5.jpg"><figure><img src="/images/band/band5.jpg" alt="gallery 5"></figure></a>
-								</div>
-								<div class="filterable-item stuff">
-									<a href="dummy/large-gallery/gallery-6.jpg"><figure><img src="dummy/gallery-6.jpg" alt="gallery 6"></figure></a>
-								</div>
-								<div class="filterable-item band">
-									<a href="dummy/large-gallery/gallery-7.jpg"><figure><img src="dummy/gallery-7.jpg" alt="gallery 7"></figure></a>
-								</div>
-								<div class="filterable-item band">
-									<a href="dummy/large-gallery/gallery-8.jpg"><figure><img src="dummy/gallery-8.jpg" alt="gallery 8"></figure></a>
-								</div>
-								<div class="filterable-item band">
-									<a href="dummy/large-gallery/gallery-9.jpg"><figure><img src="dummy/gallery-9.jpg" alt="gallery 9"></figure></a>
-								</div>
-								<div class="filterable-item stuff">
-									<a href="dummy/large-gallery/gallery-10.jpg"><figure><img src="dummy/gallery-10.jpg" alt="gallery 10"></figure></a>
-								</div>
-								<div class="filterable-item band">
-									<a href="dummy/large-gallery/gallery-11.jpg"><figure><img src="dummy/gallery-11.jpg" alt="gallery 11"></figure></a>
-								</div>
-								<div class="filterable-item stuff">
-									<a href="dummy/large-gallery/gallery-12.jpg"><figure><img src="dummy/gallery-12.jpg" alt="gallery 12"></figure></a>
-								</div> -->
 							</div>
 						</div>
 					</div>
 				</div> <!-- .testimonial-section -->
-
-				
 			</main> <!-- .main-content -->
 
 			<%- include('../partials/footer.ejs') %>
@@ -137,17 +132,6 @@
 		<script src="../js/jquery-1.11.1.min.js"></script>		
 		<script src="../js/plugins.js"></script>
 		<script src="../js/app.js"></script>
-		<script>
-			// const month = ["Januar","Februar","Mart","April","Maj","Jun","Jul","Avgust","Septembar","Octobar","Novembar","Decembar"];
-			
-			// events.forEach(event => {
-			// 	const d = "{{event.date}}";
-			// 	let name = month[d.getMonth()];
-			// 	console.log('asdasdsad',name);
-			// 	document.getElementById("demo").innerHTML = name;
-			// })
-			
-			</script>
 		
 	</body>
 
