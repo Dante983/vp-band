@@ -14,11 +14,11 @@
 					<nav class="main-navigation">
 						<button type="button" class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item"><a href="/">Home</a></li>
-							<li class="menu-item"><a href="/about">About</a></li>
-							<li class="menu-item"><a href="/gallery">Gallery</a></li>
-							<li class="menu-item current-menu-item"><a href="/page/events">Events</a></li>
-							<li class="menu-item"><a href="/contact">Contact</a></li>
+							<li class="menu-item"><a href="/">Pocetna</a></li>
+							<li class="menu-item"><a href="/about">O nama</a></li>
+							<li class="menu-item"><a href="/gallery">Galerija</a></li>
+							<li class="menu-item current-menu-item"><a href="/page/events">Dogadjaji</a></li>
+							<li class="menu-item"><a href="/contact">Kontakt</a></li>
 						</ul> <!-- .menu -->
 					</nav> <!-- .main-navigation -->
 					<div class="mobile-menu"></div>
@@ -56,6 +56,12 @@
 														<tr>
 															<td style="padding: 10px; border: 1px solid #555; color: white;">
 																<%= event.event %>
+															</td>
+															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+																<%= event.location %>
+															</td>
+															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+																<%= event.place %>
 															</td>
 															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
 																<%= event.date.toDateString() %>

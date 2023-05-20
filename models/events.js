@@ -2,11 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
+    event: {
+        type: String,
+        require: true
+    },
     year: {
         type: Number,
         require: true
     },
-    event: {
+    location: {
+        type: String,
+        require: true
+    },
+    place: {
         type: String,
         require: true
     },

@@ -2444,7 +2444,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 70px;
+    width: 90px;
     background: #3457D5;
     background: -webkit-linear-gradient(90deg, #3457D5, #3457D5) top left, -webkit-linear-gradient(90deg, #3457D5, #3457D5) top right, -webkit-linear-gradient(135deg, transparent 10px, #3457D5 0) bottom right, -webkit-linear-gradient(90deg, #3457D5, #3457D5) bottom left;
     background: linear-gradient(0deg, #3457D5, #3457D5) top left, linear-gradient(0deg, #3457D5, #3457D5) top right, linear-gradient(315deg, transparent 10px, #3457D5 0) bottom right, linear-gradient(0deg, #3457D5, #3457D5) bottom left;

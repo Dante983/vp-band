@@ -55,7 +55,7 @@
 
 		$container.imagesLoaded(function(){
 		    $container.isotope({
-		        filter: '*',
+		        filter: '.2023',
 		        layoutMode: 'fitRows',
 		        animationOptions: {
 		            duration: 750,
