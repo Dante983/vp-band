@@ -2602,6 +2602,13 @@ body {
 .filterable-items {
   margin: 0 -15px; }
 
+
+.event-table {
+  width: 100%;
+  max-width: 400px; /* Prilagodite maksimalnu širinu tabele prema potrebama */
+  margin: 0 auto;
+}
+
 /* line 57, sass/pages/_gallery.scss */
 .filterable-item {
   padding: 15px;

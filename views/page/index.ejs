@@ -102,7 +102,7 @@
 										<span class="month"><%= event.month %></span>
 									</div>
 									<h2 class="entry-title"><%= event._doc.year %></h2>
-									<p><%= event._doc.event %></p>
+									<p><%= event._doc.event %> <br> <%= event._doc.location %></p>
 								</div> <!-- .event -->
 							<% }) %>
 							
@@ -154,14 +154,6 @@
 		<script src="/js/jquery-1.11.1.min.js"></script>		
 		<script src="/js/plugins.js"></script>
 		<script src="/js/app.js"></script>
-		<script>
-
-			const monthNames = [
-				'Januar', 'Februar', 'Mart', 'April', 'Maj', 'Jun',
-				'Jul', 'Avgust', 'Septembar', 'Octobar', 'Novembar', 'Decembar'
-			];
-
-		  </script>
 		
 	</body>
 

@@ -35,35 +35,79 @@ app.use(morgan('dev'));
 //             year: 2023,
 //             location: 'Mrkonjic Grad',
 //             place: 'Svadbeni salon Manjaca',
-//             date: new Date("2023-10-13")
+//             date: new Date("2023-01-13")
 //         },{
 //             event: 'Krstenje',
 //             year: 2023,
 //             location: 'Doboj',
 //             place: 'Svadbeni salon Pivo',
-//             date: new Date("2023-12-11")
+//             date: new Date("2023-02-11")
 //         },{
 //             event: 'Rodjendan',
-//             year: 2024,
+//             year: 2023,
 //             location: 'Banja Luka',
 //             place: 'Astorya',
-//             date: new Date("2023-08-04")
+//             date: new Date("2023-03-04")
 //         },{
 //             event: 'Svadba',
 //             year: 2023,
 //             location: 'Bijeljina',
 //             place: 'Svadbeni salon Sunce',
-//             date: new Date("2024-04-22")
+//             date: new Date("2023-04-22")
+//         },{
+//             event: 'Svadba',
+//             year: 2023,
+//             location: 'Srbac',
+//             place: 'Dynamic :(',
+//             date: new Date("2024-05-07")
 //         },{
 //             event: 'Svadba',
 //             year: 2023,
 //             location: 'Srbac',
 //             place: 'Dynamic :(',
 //             date: new Date("2024-06-07")
+//         },{
+//             event: 'Svadba',
+//             year: 2023,
+//             location: 'Srbac',
+//             place: 'Dynamic :(',
+//             date: new Date("2024-07-07")
+//         },{
+//             event: 'Svadba',
+//             year: 2023,
+//             location: 'Srbac',
+//             place: 'Dynamic :(',
+//             date: new Date("2024-08-07")
+//         },{
+//             event: 'Svadba',
+//             year: 2023,
+//             location: 'Srbac',
+//             place: 'Dynamic :(',
+//             date: new Date("2024-09-07")
+//         },{
+//             event: 'Svadba',
+//             year: 2023,
+//             location: 'Srbac',
+//             place: 'Dynamic :(',
+//             date: new Date("2024-10-07")
+//         },{
+//             event: 'Svadba',
+//             year: 2023,
+//             location: 'Srbac',
+//             place: 'Dynamic :(',
+//             date: new Date("2024-11-07")
+//         },{
+//             event: 'Svadba',
+//             year: 2023,
+//             location: 'Srbac',
+//             place: 'Dynamic :(',
+//             date: new Date("2024-12-07")
 //         },
 //     ])
 // }
 
+
+// inserPostData();
 
 
 app.get('/about', (req, res) => {

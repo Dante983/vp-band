@@ -32,99 +32,108 @@
 							<h2 class="entry-title">Events</h2>
 							<div class="filter-links filterable-nav">
 								<select class="mobile-filter">
-									<option value=".2023" selected>2023</option>
-									<option value=".2024">2024</option>
-									<option value=".2025">2025</option>
-								</select>
+										<option value=".2023" selected>2023</option>
+										<option value=".2024">2024</option>
+										<option value=".2025">2025</option>
+									</select>
 								<a href="#" class="current" data-filter=".2023">2023</a>
 								<a href="#" data-filter=".2024">2024</a>
 								<a href="#" data-filter=".2025">2025</a>
 							</div>
-							<div class="filterable-items">
-								<div class="filterable-item 2023" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-									<% months.forEach(month => { %>
-										<% const filteredEvents = events.filter(event => (event.date.getMonth()) === months.indexOf(month) && event.year == 2023); %>
-										<% if(filteredEvents.length > 0) { %>
-											<div style="flex: 1 0 25%;">
-												<table style="border-color: white; background-color: #222; border-collapse: collapse; width: 100%;">
-													<tr style="background-color: #333;">
-														<th colspan="2" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
-															<%= month %>
-														</th>
+							<div class="filterable-items" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+								<% months.forEach(month => { %>
+									<% const year = 2023; %>
+									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
+									<% if(filteredEvents.length > 0) { %>
+										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
+											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+												<tr style="background-color: #333;">
+													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+														<%= month %>
+													</th>
+												</tr>
+												<% filteredEvents.forEach(event => { %>
+													<tr>
+														<td style="padding: 10px; border: 1px solid #555; color: white;">
+															<%= event.event %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.location %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.place %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.date.toDateString() %>
+														</td>
 													</tr>
-													<% filteredEvents.forEach(event => { %>
-														<tr>
-															<td style="padding: 10px; border: 1px solid #555; color: white;">
-																<%= event.event %>
-															</td>
-															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-																<%= event.location %>
-															</td>
-															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-																<%= event.place %>
-															</td>
-															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-																<%= event.date.toDateString() %>
-															</td>
-														</tr>
-													<% }) %>
-												</table>
-											</div>
-										<% } %>
-									<% }) %>
-								</div>
-								<div class="filterable-item 2024" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-									<% months.forEach(month => { %>
-										<% const filteredEvents = events.filter(event => (event.date.getMonth()) === months.indexOf(month) && event.year == 2024); %>
-										<% if(filteredEvents.length > 0) { %>
-											<div style="flex: 1 0 25%;">
-												<table style="border-color: white; background-color: #222; border-collapse: collapse; width: 100%;">
-													<tr style="background-color: #333;">
-														<th colspan="2" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
-															<%= month %>
-														</th>
+												<% }) %>
+											</table>
+										</div>
+									<% } %>
+								<% }) %>
+								<% months.forEach(month => { %>
+									<% const year = 2024; %>
+									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
+									<% if(filteredEvents.length > 0) { %>
+										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
+											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+												<tr style="background-color: #333;">
+													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+														<%= month %>
+													</th>
+												</tr>
+												<% filteredEvents.forEach(event => { %>
+													<tr>
+														<td style="padding: 10px; border: 1px solid #555; color: white;">
+															<%= event.event %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.location %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.place %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.date.toDateString() %>
+														</td>
 													</tr>
-													<% filteredEvents.forEach(event => { %>
-														<tr>
-															<td style="padding: 10px; border: 1px solid #555; color: white;">
-																<%= event.event %>
-															</td>
-															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-																<%= event.date.toDateString() %>
-															</td>
-														</tr>
-													<% }) %>
-												</table>
-											</div>
-										<% } %>
-									<% }) %>
-								</div>
-								<div class="filterable-item 2025" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-									<% months.forEach(month => { %>
-										<% const filteredEvents = events.filter(event => (event.date.getMonth()) === months.indexOf(month) && event.year == 2025); %>
-										<% if(filteredEvents.length > 0) { %>
-											<div style="flex: 1 0 25%;">
-												<table style="border-color: white; background-color: #222; border-collapse: collapse; width: 100%;">
-													<tr style="background-color: #333;">
-														<th colspan="2" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
-															<%= month %>
-														</th>
+												<% }) %>
+											</table>
+										</div>
+									<% } %>
+								<% }) %>
+								<% months.forEach(month => { %>
+									<% const year = 2025; %>
+									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
+									<% if(filteredEvents.length > 0) { %>
+										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
+											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+												<tr style="background-color: #333;">
+													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+														<%= month %>
+													</th>
+												</tr>
+												<% filteredEvents.forEach(event => { %>
+													<tr>
+														<td style="padding: 10px; border: 1px solid #555; color: white;">
+															<%= event.event %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.location %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.place %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.date.toDateString() %>
+														</td>
 													</tr>
-													<% filteredEvents.forEach(event => { %>
-														<tr>
-															<td style="padding: 10px; border: 1px solid #555; color: white;">
-																<%= event.event %>
-															</td>
-															<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-																<%= event.date.toDateString() %>
-															</td>
-														</tr>
-													<% }) %>
-												</table>
-											</div>
-										<% } %>
-									<% }) %>
-								</div>
+												<% }) %>
+											</table>
+										</div>
+									<% } %>
+								<% }) %>
 							</div>
 						</div>
 					</div>
@@ -138,6 +147,7 @@
 		<script src="../js/jquery-1.11.1.min.js"></script>		
 		<script src="../js/plugins.js"></script>
 		<script src="../js/app.js"></script>
+		
 		
 	</body>
 

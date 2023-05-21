@@ -85,3 +85,9 @@
   -o-transition-duration: 0s;
   transition-duration: 0s;
 }
+
+.event-table {
+	width: 100%;
+	max-width: 400px; /* Prilagodite maksimalnu širinu tabele prema potrebama */
+	margin: 0 auto;
+}
