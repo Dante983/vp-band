@@ -14,3 +14,5 @@ If something is missing, be sure to add theto readme file
 
 
 If you get error 'command not found: nodemon' do the following 'sudo npm install -g --force nodemon'
+
+Also once the code is set up .env fiel is needed for link to mongodb uri
