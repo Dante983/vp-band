@@ -11,3 +11,6 @@ If something is missing, be sure to add theto readme file
 - Check MongoDB Atlas ip whitelsiting
 - to start the server run 'nodemon app'
 - server should be started at localhost:3001, but be sure to check it for sure
+
+
+If you get error 'command not found: nodemon' do the following 'sudo npm install -g --force nodemon'
