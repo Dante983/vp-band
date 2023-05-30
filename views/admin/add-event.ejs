@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../partials/head.ejs') %>
+
+	<body>
+		
+		<div id="site-content">
+			<%- include('../partials/header_admin.ejs') %>
+			
+			<main class="main-content">
+				<div class="fullwidth-block inner-content">
+					<div class="container">
+						<h2 class="page-title">Dodaj Dogadjaj</h2>
+						<div class="row">
+							<div class="col-md-8">
+								<form action="#" class="contact-form">
+									<div id="modal" class="modal">
+										<div class="modal-content">
+										  <form id="modalForm">
+											<input type="text" name="event" placeholder="Dogadjaj" required>
+											<input type="text" name="year" placeholder="Godina" required>
+											<input type="text" name="location" placeholder="Grad" required>
+											<input type="text" name="place" placeholder="Mjesto" required>
+											<input type="date" name="field5" required>
+											<button class="button cut-corner" type="submit">Dodaj</button>
+										  </form>
+										</div>
+									</div>	
+								</form>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .testimonial-section -->
+
+				
+			</main> <!-- .main-content -->
+
+			<%- include('../partials/footer.ejs') %>
+
+		</div> <!-- #site-content -->
+
+		<script src="js/jquery-1.11.1.min.js"></script>	
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			function myFunction() {
+			  alert("Poruka poslana!");
+			}
+			</script>
+		
+	</body>
+
+</html>

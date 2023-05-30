@@ -15,7 +15,7 @@ const page_index = (req, res) => {
                 return eventCopy;
             });
             
-            res.render('page/index', { events: eventsWithDayAndMonth, monthNames: monthNames,  });
+            res.render('page/index', { events: eventsWithDayAndMonth, monthNames: monthNames,  current: 'index'});
         })
         .catch((err) => {
             console.log(err);
@@ -38,7 +38,7 @@ const page_events = (req, res) => {
             eventsByMonth[month].push(document.event);
         });
 
-        res.render('page/events', {title: 'all Events', events: result, months: monthNames, sortedMonths: eventsByMonth})
+        res.render('page/events', {title: 'all Events', events: result, months: monthNames, sortedMonths: eventsByMonth, current: 'events'})
     })
     .catch((err) => {
         console.log(err);

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../partials/head.ejs') %>
+
+	<body>
+		
+		<div id="site-content">
+			<%- include('../partials/header_admin.ejs') %>
+			
+			<h3 style="text-align: center;">Prijavi se</h3>
+
+            <form action='/admin' method="POST">
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Unesi korisnicko ime" name="username">
+
+                <label for="password"><b>Sifra</b></label>
+                <input type="password" placeholder="Unesi Sifru" name="password">
+
+                <input type="submit" value="Login" class="button">
+
+            </form>
+
+			<h3 style="text-align: center;">Registracija</h3>
+
+            <form action='/register' method="POST">
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Unesi korisnicko ime" name="username">
+
+                <label for="password"><b>Sifra</b></label>
+                <input type="password" placeholder="Unesi Sifru" name="password">
+
+                <input type="submit" value="Register" class="button">
+
+            </form>
+
+
+			<%- include('../partials/footer.ejs') %>
+
+		</div> <!-- #site-content -->
+
+		<script src="js/jquery-1.11.1.min.js"></script>	
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			function myFunction() {
+			  alert("Poruka poslana!");
+			}
+			</script>
+		
+	</body>
+
+</html>

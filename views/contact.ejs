@@ -5,25 +5,7 @@
 	<body>
 		
 		<div id="site-content">
-			<header class="site-header">
-				<div class="container">
-					<a href="/" id="branding">
-						<img src="/images/logo.png" alt="Site Title">
-					</a> <!-- #branding -->
-					
-					<nav class="main-navigation">
-						<button type="button" class="toggle-menu"><i class="fa fa-bars"></i></button>
-						<ul class="menu">
-							<li class="menu-item"><a href="/">Pocetna</a></li>
-							<li class="menu-item"><a href="/about">O nam</a></li>
-							<li class="menu-item"><a href="/gallery">Galerija</a></li>
-							<li class="menu-item"><a href="/page/events">Dogadjaji</a></li>
-							<li class="menu-item current-menu-item"><a href="/contact">Kontakt</a></li>
-						</ul> <!-- .menu -->
-					</nav> <!-- .main-navigation -->
-					<div class="mobile-menu"></div>
-				</div>
-			</header> <!-- .site-header -->
+			<%- include('./partials/header.ejs') %>
 			
 			<main class="main-content">
 				<div class="fullwidth-block inner-content">
@@ -39,23 +21,6 @@
 									<input type="submit" value="Send message" onclick="myFunction()">
 								</form>
 							</div>
-							<!-- <div class="col-md-6">
-								<div class="map-wrapper">
-									<div class="map"></div>
-									<address>
-										<div class="row">
-											<div class="col-sm-6">
-												<strong>Company Name INC.</strong>
-												<span>40 Sibley St, Detroit</span>
-											</div>
-											<div class="col-sm-6">
-												<a href="mailto:office@companyname.com">office@companyname.com</a> <br>
-												<a href="tel:532930098891">(532) 930 098 891</a>
-											</div>
-										</div>
-									</address>
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</div> <!-- .testimonial-section -->
@@ -70,11 +35,6 @@
 		<script src="js/jquery-1.11.1.min.js"></script>	
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
-		<script>
-			function myFunction() {
-			  alert("Poruka poslana!");
-			}
-			</script>
 		
 	</body>
 
