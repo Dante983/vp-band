@@ -3,13 +3,14 @@ require('dotenv').config();
 const express = require('express');
 const { result, get } = require('lodash');
 const pageRoutes = require('./routes/pageRoutes');
+const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const app = express();
 const morgan = require('morgan');
 const { render } = require('ejs');
 const connectDB = require('./server/config/db');
 const Event = require('./models/events');
-// const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 const mongoStore = require('connect-mongo')
 const session = require('express-session');
 
@@ -31,7 +32,8 @@ try {
 connectDB();
 
 app.set('view engine', 'ejs');
-// app.use(cookieParser);
+app.use(cookieParser());
+app.use(methodOverride('_method'));
 
 app.use(session({
     secret:'vizantija',

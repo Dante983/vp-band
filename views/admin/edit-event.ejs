@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../partials/head.ejs') %>
+
+	<body>
+		
+		<div id="site-content">
+			<%- include('../partials/header_admin.ejs') %>
+			
+			<main class="main-content">
+				<div class="fullwidth-block inner-content">
+					<div class="container">
+						<h2 class="page-title">Uredu Dogadjaj</h2>
+						<div class="row">
+							<div class="col-md-8">
+								<form action="/edit-event/<%= event._id %>?_method=PUT" method="POST" class="contact-form">
+									<div id="modal" class="modal">
+										<div class="modal-content">
+										  <form id="modalForm" >
+											<input type="text" name="event" placeholder="Dogadjaj" required value="<%= event.event %>">
+											<input type="text" name="year" placeholder="Godina" required value="<%= event.year %>">
+											<input type="text" name="location" placeholder="Grad" required value="<%= event.location %>">
+											<input type="text" name="place" placeholder="Mjesto" required value="<%= event.place %>">
+                                            <input type="date" name="date" placeholder="Izaberi Datum" required value="<%= event.date.toISOString().split('T')[0] %>">
+											<input class="button cut-corner" type="submit" value="Azuriraj Dogadjaj">
+										  </form>
+                                        <form action="/delete-event/<%= event._id %>?_method=DELETE" method="POST">
+                                            <input type="submit" value="Obrisi" class="button" style="margin-right: 10px;">
+                                        </form>
+										</div>
+									</div>	
+								</form>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .testimonial-section -->
+
+				
+			</main> <!-- .main-content -->
+
+			<%- include('../partials/footer.ejs') %>
+
+		</div> <!-- #site-content -->
+
+		<script src="js/jquery-1.11.1.min.js"></script>	
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			function myFunction() {
+			  alert("Poruka poslana!");
+			}
+			</script>
+		
+	</body>
+
+</html>

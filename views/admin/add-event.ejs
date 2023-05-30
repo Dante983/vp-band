@@ -13,16 +13,16 @@
 						<h2 class="page-title">Dodaj Dogadjaj</h2>
 						<div class="row">
 							<div class="col-md-8">
-								<form action="#" class="contact-form">
+								<form action="/add-event" method="POST" class="contact-form">
 									<div id="modal" class="modal">
 										<div class="modal-content">
-										  <form id="modalForm">
+										  <form id="modalForm" >
 											<input type="text" name="event" placeholder="Dogadjaj" required>
 											<input type="text" name="year" placeholder="Godina" required>
 											<input type="text" name="location" placeholder="Grad" required>
 											<input type="text" name="place" placeholder="Mjesto" required>
-											<input type="date" name="field5" required>
-											<button class="button cut-corner" type="submit">Dodaj</button>
+											<input type="date" name="date" placeholder="Izaberi Datum" required>
+											<input class="button cut-corner" type="submit" value="Dodaj Dogadjaj">
 										  </form>
 										</div>
 									</div>	
