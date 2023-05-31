@@ -16,10 +16,7 @@ const session = require('express-session');
 
 const dbURI = process.env.MONGODB_URI;
 const PORT = 3001 || process.env.PORT;
-// mongoose.connect(dbURI)
-//     .then((result) => app.listen(3001))
-//     .catch((err) => console.log(err));
-// console.log(mongoose);
+
 try {
     app.listen(PORT, () => {
         console.log(`Listening on port ${PORT}`);
@@ -45,7 +42,6 @@ app.use(session({
 }))
 
 app.use(express.static('public'));
-// app.use(express.static('js'));
 
 app.use(express.urlencoded({extended: true}))
 app.use(morgan('dev'));

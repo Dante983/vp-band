@@ -11,7 +11,7 @@
 				<div class="fullwidth-block gallery">
 					<div class="container">
 						<div class="content fullwidth">
-							<h2 class="entry-title">Events</h2>
+							<h2 class="entry-title">Nastupi</h2>
 							<div class="filter-links filterable-nav">
 								<select class="mobile-filter">
 										<option value=".2023" selected>2023</option>
@@ -46,7 +46,7 @@
 															<%= event.place %>
 														</td>
 														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-															<%= event.date.toDateString() %>
+															<%= event.date.toLocaleDateString('en-GB') %>
 														</td>
 													</tr>
 												<% }) %>
@@ -77,7 +77,7 @@
 															<%= event.place %>
 														</td>
 														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-															<%= event.date.toDateString() %>
+															<%= event.date.toLocaleDateString('en-GB') %>
 														</td>
 													</tr>
 												<% }) %>
@@ -108,7 +108,7 @@
 															<%= event.place %>
 														</td>
 														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-															<%= event.date.toDateString() %>
+															<%= event.date.toLocaleDateString('en-GB') %>
 														</td>
 													</tr>
 												<% }) %>

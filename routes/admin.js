@@ -198,6 +198,8 @@ router.get('/logout', (req, res) => {
         console.log(error);
     }
 });
+
+
 // router.post('/register', async (req, res) =>{
 
 //     try{

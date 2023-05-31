@@ -28,49 +28,49 @@
                                     <% const year = 2023; %>
                                     <% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
                                     <% if (filteredEvents.length > 0) { %>
-                                      <div class="filterable-item <%= year %>" style="width: calc(50% - 10px); padding: 20px;">
-                                        <table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse; height: 100%;">
-                                          <tr style="background-color: #333;">
-                                            <th colspan="5" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
-                                              <%= month %>
-                                            </th>
-                                          </tr>
-                                          <% filteredEvents.forEach(event => { %>
-                                            <tr>
-                                              <td style="padding: 10px; border: 1px solid #555; color: white;">
-                                                <%= event.event %>
-                                              </td>
-                                              <td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-                                                <%= event.location %>
-                                              </td>
-                                              <td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-                                                <%= event.place %>
-                                              </td>
-                                              <td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-                                                <%= event.date.toLocaleDateString('en-GB') %>
-                                              </td>
-                                              <td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-                                                <!-- Add options for edit and delete here -->
-                                                <a href="/edit-event/<%= event.id %>">Uredi</a>
-                                                <form action="/delete-event/<%= event._id %>?_method=DELETE" method="POST">
-                                                    <input type="submit" value="Obrisi" class="button" >
-                                                </form>
-                                              </td>
-                                            </tr>
-                                          <% }) %>
-                                        </table>
-                                      </div>
+										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px); padding: 20px;">
+											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse; height: 100%;">
+												<tr style="background-color: #333;">
+													<th colspan="5" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+														<%= month %>
+													</th>
+												</tr>
+												<% filteredEvents.forEach(event => { %>
+													<tr>
+														<td style="padding: 10px; border: 1px solid #555; color: white;">
+															<%= event.event %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.location %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.place %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<%= event.date.toLocaleDateString('en-GB') %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<!-- Add options for edit and delete here -->
+															<a href="/edit-event/<%= event.id %>">Uredi</a>
+															<form action="/delete-event/<%= event._id %>?_method=DELETE" method="POST">
+																<input type="submit" value="Obrisi" class="button" >
+															</form>
+														</td>
+													</tr>
+												<% }) %>
+											</table>
+										</div>
                                     <% } %>
-                                  <% }) %>                                
+								<% }) %>                                
 								<% months.forEach(month => { %>
-									<% const year = 2024; %>
-									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
-									<% if(filteredEvents.length > 0) { %>
-										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
-											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+                                    <% const year = 2024; %>
+                                    <% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
+                                    <% if (filteredEvents.length > 0) { %>
+										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px); padding: 20px;">
+											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse; height: 100%;">
 												<tr style="background-color: #333;">
-													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
-														<%= month %>
+													<th colspan="5" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+													<%= month %>
 													</th>
 												</tr>
 												<% filteredEvents.forEach(event => { %>
@@ -85,23 +85,30 @@
 															<%= event.place %>
 														</td>
 														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-															<%= event.date.toDateString() %>
+															<%= event.date.toLocaleDateString('en-GB') %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<!-- Add options for edit and delete here -->
+															<a href="/edit-event/<%= event.id %>">Uredi</a>
+															<form action="/delete-event/<%= event._id %>?_method=DELETE" method="POST">
+																<input type="submit" value="Obrisi" class="button" >
+															</form>
 														</td>
 													</tr>
 												<% }) %>
 											</table>
 										</div>
-									<% } %>
-								<% }) %>
+                                    <% } %>
+								<% }) %>   
 								<% months.forEach(month => { %>
-									<% const year = 2025; %>
-									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
-									<% if(filteredEvents.length > 0) { %>
-										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
-											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+                                    <% const year = 2025; %>
+                                    <% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
+                                    <% if (filteredEvents.length > 0) { %>
+										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px); padding: 20px;">
+											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse; height: 100%;">
 												<tr style="background-color: #333;">
-													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
-														<%= month %>
+													<th colspan="5" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+													<%= month %>
 													</th>
 												</tr>
 												<% filteredEvents.forEach(event => { %>
@@ -116,14 +123,21 @@
 															<%= event.place %>
 														</td>
 														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
-															<%= event.date.toDateString() %>
+															<%= event.date.toLocaleDateString('en-GB') %>
+														</td>
+														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+															<!-- Add options for edit and delete here -->
+															<a href="/edit-event/<%= event.id %>">Uredi</a>
+															<form action="/delete-event/<%= event._id %>?_method=DELETE" method="POST">
+																<input type="submit" value="Obrisi" class="button" >
+															</form>
 														</td>
 													</tr>
 												<% }) %>
 											</table>
 										</div>
-									<% } %>
-								<% }) %>
+                                    <% } %>
+                                  <% }) %>   
 							</div>
 						</div>
 					</div>
