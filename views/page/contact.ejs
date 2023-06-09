@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../partials/head.ejs') %>
+
+	<body>
+		
+		<div id="site-content">
+			<%- include('../partials/header.ejs') %>
+			
+			<main class="main-content">
+				<div class="fullwidth-block inner-content">
+					<div class="container">
+						<h2 class="page-title">Kontaktiraj nas</h2>
+						<div class="row">
+							<div class="col-md-8">
+								<form action="/band/contact" method="POST" class="contact-form" id="contactForm" required>
+									<input type="text" id="name" name="name" placeholder="Ime" required>
+									<input type="text" id="email" name="email" placeholder="Email" required>
+									<textarea name="body" id="body" name="body" placeholder="Pitanje" required></textarea>
+									<input type="submit" id="form-submit" value="Posalji pitanje" required>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .testimonial-section -->
+
+				
+			</main> <!-- .main-content -->
+
+			<%- include('../partials/footer.ejs') %>
+
+		</div> <!-- #site-content -->
+
+		<script src="/js/jquery-1.11.1.min.js"></script>	
+		<script src="/js/plugins.js"></script>
+		<script src="/js/app.js"></script>
+		
+	</body>
+
+</html>

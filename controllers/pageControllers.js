@@ -1,5 +1,9 @@
 const Event = require('../models/events');
 const monthNames = ["Januar","Februar","Mart","April","Maj","Jun","Jul","Avgust","Septembar","Octobar","Novembar","Decembar"];
+const nodeMailer = require('nodemailer');
+
+
+
 
 const page_index = (req, res) => {
     const startDate = new Date(); // Set to today's date
@@ -45,8 +49,26 @@ const page_events = (req, res) => {
     })
 }
 
+const page_contact = ( req, res ) => {
+    res.render('page/contact', {title: 'Contact', current: 'contact' });
+};
+
+const page_contact_post = async ( req, res ) => {
+    const { name, email, body } = req.body;
+    try {
+        await mainMail(yourname, youremail, yoursubject, yourmessage);
+        
+        res.send("Message Successfully Sent!");
+      } catch (error) {
+        res.send("Message Could not be Sent");
+      }
+    res.render('page/contact', {title: 'Contact', current: 'contact' });
+};
+
 module.exports = {
     page_index,
-    page_events
+    page_events,
+    page_contact,
+    page_contact_post
     // page_gallery
 }

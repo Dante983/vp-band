@@ -126,5 +126,39 @@
 	$(window).ready(function(){
 
 	});
+	const contactForm = document.getElementById("contactForm");
+// console.log(contactForm);
+	contactForm.addEventListener("submit", async (event) => {
+	event.preventDefault();
+
+	const name = document.getElementById("name").value;
+	const email = document.getElementById("email").value;
+	const body = document.getElementById("body").value;
+
+	try {
+		const response = await fetch("/band/contact", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({ name, email, body }),
+		});
+
+		const data = await response.json();
+
+		if (data.success) {
+		alert("Message Sent Successfully!");
+
+		setTimeout(() => {
+			window.location.href = "/band/contact";
+		}, 1500);
+		} else {
+		alert("Message Could not be Sent");
+		}
+	} catch (error) {
+		console.log(error);
+		alert("An error occurred. Please try again.");
+	}
+	});
 
 })(jQuery, document, window);
