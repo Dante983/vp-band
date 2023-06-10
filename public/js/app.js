@@ -126,39 +126,43 @@
 	$(window).ready(function(){
 
 	});
-	const contactForm = document.getElementById("contactForm");
-// console.log(contactForm);
-	contactForm.addEventListener("submit", async (event) => {
-	event.preventDefault();
+	
+	if (window.location.href.includes('/band/contact')) {
+	
+		const contactForm = document.getElementById("contactForm");
+		
+		contactForm.addEventListener("submit", async (event) => {
+		event.preventDefault();
 
-	const name = document.getElementById("name").value;
-	const email = document.getElementById("email").value;
-	const body = document.getElementById("body").value;
+		const name = document.getElementById("name").value;
+		const email = document.getElementById("email").value;
+		const body = document.getElementById("body").value;
 
-	try {
-		const response = await fetch("/band/contact", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({ name, email, body }),
-		});
+		try {
+			const response = await fetch("/band/contact", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ name, email, body }),
+			});
 
-		const data = await response.json();
+			const data = await response.json();
 
-		if (data.success) {
-		alert("Message Sent Successfully!");
+			if (data.success) {
+				alert("Poruka poslana!");
 
-		setTimeout(() => {
-			window.location.href = "/band/contact";
-		}, 1500);
-		} else {
-		alert("Message Could not be Sent");
+				setTimeout(() => {
+					window.location.href = "/band/contact";
+			}, 500);
+			} else {
+				alert("Message Could not be Sent");
+			}
+		} catch (error) {
+			console.log(error);
+			alert("An error occurred. Please try again.");
 		}
-	} catch (error) {
-		console.log(error);
-		alert("An error occurred. Please try again.");
+		});
 	}
-	});
 
 })(jQuery, document, window);

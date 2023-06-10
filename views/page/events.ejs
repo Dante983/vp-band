@@ -22,13 +22,13 @@
 								<a href="#" data-filter=".2024">2024</a>
 								<a href="#" data-filter=".2025">2025</a>
 							</div>
-							<div class="filterable-items" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+							<div class="filterable-items">
 								<% months.forEach(month => { %>
 									<% const year = 2023; %>
 									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
 									<% if(filteredEvents.length > 0) { %>
-										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
-											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+										<div class="filterable-item <%= year %>"> <!-- Promjena: Podešavanje širine na 50% -->
+											<table class="event-table" style="border-color: white; background-color: #222;">
 												<tr style="background-color: #333;">
 													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
 														<%= month %>

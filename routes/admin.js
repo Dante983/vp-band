@@ -28,10 +28,8 @@ const authMiddleware = (req, res, next) => {
     } catch (error) {
         res.status(401).json({message: 'unauthorized'});
     }
-
     
-}
-
+};
 
 
 router.get('/admin', async (req, res) =>{
@@ -43,7 +41,6 @@ router.get('/admin', async (req, res) =>{
     }
     
 });
-
 
 
 router.post('/admin', async (req, res) =>{
@@ -101,7 +98,6 @@ router.get('/admin_events', authMiddleware, async (req, res) =>{
         console.log(error);
     }
 });
-
 
 
 router.get('/add-event', authMiddleware, async (req, res) => {
@@ -174,7 +170,6 @@ router.put('/edit-event/:id', authMiddleware, async (req, res) => {
 });
 
 
-
 router.delete('/delete-event/:id', authMiddleware, async (req, res) => {
     try {console.log('asd',req.params.id);
         await Event.deleteOne({ _id: req.params.id });
@@ -187,12 +182,10 @@ router.delete('/delete-event/:id', authMiddleware, async (req, res) => {
 });
 
 
-
 //logout
 router.get('/logout', (req, res) => {
     try {
         res.clearCookie('token');
-        // res.json({ message:'Odjavljen uspjesno.' });
         res.redirect('/');
     } catch (error) {
         console.log(error);

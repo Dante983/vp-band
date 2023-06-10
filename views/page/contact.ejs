@@ -15,7 +15,8 @@
 							<div class="col-md-8">
 								<form action="/band/contact" method="POST" class="contact-form" id="contactForm" required>
 									<input type="text" id="name" name="name" placeholder="Ime" required>
-									<input type="text" id="email" name="email" placeholder="Email" required>
+									<input type="text" id="email" name="email" placeholder="Email" 
+										pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
 									<textarea name="body" id="body" name="body" placeholder="Pitanje" required></textarea>
 									<input type="submit" id="form-submit" value="Posalji pitanje" required>
 								</form>
