@@ -165,4 +165,17 @@
 		});
 	}
 
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('shuw');
+			} else {
+				entry.target.classList.remove('shuw');
+			}
+		});
+	});
+	
+	const hiddenElements = document.querySelectorAll('.hiddun');
+	hiddenElements.forEach((el) => observer.observe(el));
+
 })(jQuery, document, window);

@@ -27,25 +27,25 @@
 									<% const year = 2023; %>
 									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
 									<% if(filteredEvents.length > 0) { %>
-										<div class="filterable-item <%= year %>"> <!-- Promjena: Podešavanje širine na 50% -->
-											<table class="event-table" style="border-color: white; background-color: #222;">
+										<div class="filterable-item <%= year %>">
+											<table class="event-table">
 												<tr style="background-color: #333;">
-													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+													<th colspan="4" style="text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
 														<%= month %>
 													</th>
 												</tr>
 												<% filteredEvents.forEach(event => { %>
 													<tr>
-														<td style="padding: 10px; border: 1px solid #555; color: white;">
+														<td style="color: white;">
 															<%= event.event %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.location %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.place %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.date.toLocaleDateString('en-GB') %>
 														</td>
 													</tr>
@@ -58,25 +58,25 @@
 									<% const year = 2024; %>
 									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
 									<% if(filteredEvents.length > 0) { %>
-										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
-											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+										<div class="filterable-item <%= year %>">
+											<table class="event-table">
 												<tr style="background-color: #333;">
-													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+													<th colspan="4" style="text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
 														<%= month %>
 													</th>
 												</tr>
 												<% filteredEvents.forEach(event => { %>
 													<tr>
-														<td style="padding: 10px; border: 1px solid #555; color: white;">
+														<td style="color: white;">
 															<%= event.event %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.location %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.place %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.date.toLocaleDateString('en-GB') %>
 														</td>
 													</tr>
@@ -89,25 +89,25 @@
 									<% const year = 2025; %>
 									<% const filteredEvents = events.filter(event => event.date.getMonth() === months.indexOf(month) && event.year == year); %>
 									<% if(filteredEvents.length > 0) { %>
-										<div class="filterable-item <%= year %>" style="width: calc(50% - 10px);"> <!-- Promjena: Podešavanje širine na 50% -->
-											<table class="event-table" style="border-color: white; background-color: #222; border-collapse: collapse;">
+										<div class="filterable-item <%= year %>">
+											<table class="event-table">
 												<tr style="background-color: #333;">
-													<th colspan="4" style="padding: 10px; text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
+													<th colspan="4" style="text-align: center; border: 1px solid #555; color: white; font-weight: bold;">
 														<%= month %>
 													</th>
 												</tr>
 												<% filteredEvents.forEach(event => { %>
 													<tr>
-														<td style="padding: 10px; border: 1px solid #555; color: white;">
+														<td style="color: white;">
 															<%= event.event %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.location %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.place %>
 														</td>
-														<td style="padding: 10px; border: 1px solid #555; color: #aaa;">
+														<td style="color: #aaa;">
 															<%= event.date.toLocaleDateString('en-GB') %>
 														</td>
 													</tr>
