@@ -113,6 +113,12 @@ router.get('/add-event', authMiddleware, async (req, res) => {
 router.post('/add-event', authMiddleware, async (req, res) => {
     try {
         try {
+            const existingEvent = await Event.findOne({ date: req.body.date });
+
+        if (existingEvent) {
+            return res.send('<script>alert("Nije moguce kreirati dogadjaj. Izabrani datum vec postoji."); window.location.href = "/admin_events";</script>');
+        }
+
             const newEvent = new Event({
                 event: req.body.event,
                 year: req.body.year,

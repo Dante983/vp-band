@@ -2469,7 +2469,8 @@ body {
     font-size: 16px;
     font-size: 1em;
     font-size: normal;
-    font-weight: 400; }
+    font-weight: 400;
+  }
     /* line 226, sass/pages/_homepage.scss */
     .event .entry-title a {
       color: white;
