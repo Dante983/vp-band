@@ -13,6 +13,11 @@ const Event = require('./models/events');
 const cookieParser = require('cookie-parser');
 const mongoStore = require('connect-mongo')
 const session = require('express-session');
+const apiRoutes = require('./routes/api');
+// const cors = require('cors');
+
+// // Use cors middleware
+// app.use(cors());
 
 const dbURI = process.env.MONGODB_URI;
 const PORT = 3001 || process.env.PORT;
@@ -46,6 +51,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}))
 app.use(morgan('dev'));
 
+
+
+app.use('/api', apiRoutes); 
 
 app.get('/about', (req, res) => {
     res.render('about',{title: 'About', current: 'about' });
